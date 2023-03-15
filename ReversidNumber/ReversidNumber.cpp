@@ -71,10 +71,20 @@ void PrintAllDigit(int Number){
 
     }
 }
-int main() {
-    PrintAllDigit(ReadPositiveNumber("Please Enter Positive Number ?"));
+bool CheckPalindRom (int Number){
 
+    return (ReversidNumber(Number) == Number);
+}
+
+int main() {
+    int a = ReadPositiveNumber("Please Enter Positive Number ?");
+    if (CheckPalindRom(a)){
+        cout << "Yes it Is PalindRome Number" << endl;
+    }
+    else {
+        cout << "Yes it Is Not PalindRome Number" << endl;
+
+    }
     //PrintDigitnNumbers(A);
-      
     return 0;
 }
