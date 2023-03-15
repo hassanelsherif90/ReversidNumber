@@ -46,8 +46,32 @@ int ReversidNumber(int Number) {
     return Number2;
 }
 
+int CheckFrequencyDigit( short Digit ,int Number)
+{
+    int Remainder = 0 , Frequenc = 0;
+    while (Number > 0){
+        Remainder = Number % 10;
+        Number = Number / 10;
+        if (Digit == Remainder) 
+        {
+            Frequenc ++;
+        }
+    }
+    return Frequenc;
+}
+
+void PrintAllDigit(int Number){
+    for (int i = 0; i < 10; i++ ){
+        int DigitFrequenc = CheckFrequencyDigit(i , Number);
+        if (DigitFrequenc > 0)
+            cout << "\n Digit " << i << " Frequenc is " 
+            << DigitFrequenc 
+            << " Time(s)" << endl;
+
+    }
+}
 int main() {
-    cout << ReversidNumber(ReadPositiveNumber("Please Enter Positive Number ?")) << endl;
+    PrintAllDigit(ReadPositiveNumber("Please Enter Positive Number ?"));
 
     //PrintDigitnNumbers(A);
       
