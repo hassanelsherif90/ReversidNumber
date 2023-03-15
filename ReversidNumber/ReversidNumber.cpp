@@ -7,7 +7,8 @@ int ReadPositiveNumber(string Message) {
 
     int Number = 0;
 
-    do {
+    do 
+    {
         cout << Message << endl;
         cin >> Number;
     } while (Number < 0);
